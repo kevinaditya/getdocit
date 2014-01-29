@@ -3,6 +3,11 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$grayLight: #eaeaea;
+$grayLighter: #eaeaea;
+$grayDarker: #eaeaea;
+$blue: #7A8B8B;
+$docitColorScheme: #35A167;
 
 
 @mixin box_sizing {
@@ -81,6 +86,13 @@ p {
     color: white;
     text-decoration: none;
   }
+}
+
+
+#logos {
+    display: block;
+    height: 35px;
+    margin-top: 7px;
 }
 
 /* footer */
@@ -246,3 +258,158 @@ aside {
   }
 }
 
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #eaeaea;
+}
+
+.navbar-inverse {
+    background-color: $docitColorScheme;
+    border-color: #090909;
+}
+
+/*modal*/
+
+.modal {
+    overflow-y: auto;
+} 
+
+/*modal form*/
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.modal-dialog {
+    width: 360px;
+}
+
+.form-control:focus{
+  border-color:$docitColorScheme;
+}
+
+input[type="checkbox"] {
+    width:10%;
+}
+
+h2 {
+    color: black;
+}
+
+.containers {
+    width: 100%;
+}
+
+.video-container {
+    position:relative;
+    padding-top: 30px; height: 0; overflow: hidden;
+    padding-bottom:55.25%;
+}
+
+.video-container iframe, .video-container object, .video-container embed, .video-container span {
+    height: 82%;
+    left: 0;
+    margin-left: 12%;
+    margin-top: 3%;
+    position: absolute;
+    top: 0;
+    width: 76%;
+    color:white;
+    font-size:0.7em;
+}
+
+
+.product-shot.city {
+    background: url("http://getdocit.com/landscape_2.jpg") repeat scroll 0 0 / cover rgba(0, 0, 0, 0);
+}
+
+.product-shot.citeh {
+    background: none;
+}
+.white{
+  color:white;
+}
+
+.gray{
+  color:gray;
+}
+
+.product-shot {
+    width: 100%;
+}
+
+.product-shot img {
+    margin: 0 auto;
+    max-width: 100%;
+    padding-top: 20px;
+    position: relative;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.carousel {
+    background: url("http://multico.webfactoryltd.com/images/macbook.png") repeat scroll 0 0 / cover rgba(0, 0, 0, 0);
+    margin-left:20%;
+    width: 60%;
+    min-height:500px;
+}
+
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+    left: -200%;
+    background-image : linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+    right: -200%;
+    background-image : linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.carousel-control.right {
+    background-image: none;
+}
+.carousel-control.left {
+    background-image: none;
+}
+
+.font-semibold {
+    font-family: "Titillium Web",sans-serif;
+    font-weight: 600;
+}
