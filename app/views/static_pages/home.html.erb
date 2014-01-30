@@ -83,7 +83,7 @@
   <h1><span class="font-semibold gray">For Patients</span></h1>
 <!-- Carousel
   ================================================== -->
-  <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel2" class="carousel slide macbook" data-ride="carousel">
     <div class="carousel-inner">
       <div class="item active">
         <div class="video-container">
@@ -136,51 +136,38 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
           <h2>Heading</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3 social">
+        <div class="pull-right">
+          <a href="http://twitter.com/getcomposure">
+            <i class="fa fa-twitter-square fa-4x"></i>
+          </a>
+          <a href="http://facebook.com/getcomposure">
+            <i class="fa fa-facebook-square fa-4x"></i>
+          </a>
+          <a href="https://plus.google.com/112576119602159637182">
+            <i class="fa fa-google-plus-square fa-4x"></i>
+          </a>
+        </div>
+      </div>
       </div><!-- /.row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -245,6 +232,13 @@
 
       <!-- For Login -->
       <script type="text/javascript">
-      $('#register').modal('hide')
+      $('#register').modal('hide');
+
+      $('.carousel').carousel({
+        interval: false
+      });
+
       </script>
+
+
       <% end %>

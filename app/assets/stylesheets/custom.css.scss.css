@@ -385,19 +385,37 @@ h2 {
     margin-left: 0;
     margin-right: 0;
 }
-.carousel {
+#myCarousel.carousel {
     background: url("http://multico.webfactoryltd.com/images/macbook.png") repeat scroll 0 0 / cover rgba(0, 0, 0, 0);
     margin-left:20%;
     width: 60%;
     min-height:500px;
 }
 
-.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+#myCarousel.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
     left: -200%;
     background-image : linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
-.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+#myCarousel.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+    right: -200%;
+    background-image : linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+#myCarousel2.carousel {
+    background: url("http://upload.wikimedia.org/wikipedia/commons/5/5e/IPhone_5s.png") scroll 0 0 / cover rgba(0, 0, 0, 0);
+    background-size:304px 638px;
+    margin-left:10%;
+    width: 22%;
+    min-height:639px;
+}
+
+#myCarousel2.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+    left: -200%;
+    background-image : linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+#myCarousel2.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
     right: -200%;
     background-image : linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
