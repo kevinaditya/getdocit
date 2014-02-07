@@ -17,17 +17,33 @@
   </div>
 </div>
 <% else %>
-<div class="center hero-unit">
-  <h1>Welcome to the Sample App</h1>
-
-  <h2>
-    This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path,
-  class: "btn btn-large btn-primary" %>
+<div id="blob-bg" style="display: block; opacity: 1;"></div>
+<h1 class="text-special">Search and book health appointments.</h1>
+<h2>Find a practicioner with various specialisation in over 100 suburbs in Australia.</h2>
+<div class="search-box search-bar text-center">
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputEmail2">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail2" size=50 placeholder="Enter postcode, practice or doctor name">
+    </div>
+    <div class="form-group">
+      <select id="guests" class="form-control" name="Type of practitioner">
+        <option value="1">GP</option>
+        <option value="2">Physio</option>
+        <option value="3">Dentist</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select id="guests" class="form-control" name="Appointment Type">
+        <option value="1">Follow up</option>
+        <option value="2">General</option>
+        <option value="3">Long appointment</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary search">Search</button>
+    </div>
+  </form>
 </div>
 <div class="row product-shot city">
   <h1><span class="font-semibold white">For Doctors</span></h1>
@@ -43,202 +59,142 @@
       <div class="item">
        <div class="video-container">
         <span>
-         <div class="icons">
-          <div class="col-lg-2">
-            <img src="http://getdocit.com/clock.png"/>
-          </div>
-          <div class="col-lg-10">
-            <h3>Save time</h3>
-            <p class="text">Reduce time spent on unnecessary routine phone calls. Docit  allows the secretary to work on more important tasks which would otherwise be ignored whilst taking standard appointment calls. We hope to create a friendlier workplace where constant sound of ringing  will become a thing of the past.</p>
-          </div>
-        </div>
-        <div class="icons">
-          <div class="col-lg-2">
-            <img src="http://getdocit.com/moneybag.png"/>
-          </div>
-          <div class="col-lg-10">
-            <h3>Market your practice</h3>
-            <p class="text">Increase patients and freely advertise your practice. Once joining Docit, you are immediately marketing your business to potential patients and all of Docit's users. New practitioners will especially find this tool useful, as an influx of new patients will contribute to your revenue generation. An editable doctor profile will also provide insights into your practice and collect reviews and ratings.</p>
-          </div>
-        </div>
-        <div class="icons">
-         <div class="col-lg-2">
-          <img src="http://getdocit.com/cloud.png"/>
-        </div>
-        <div class="col-lg-10">
-          <h3>Appointments in the Cloud</h3>
-          <p class="text">Sophisticated and easy to use software in the cloud. Safety and reliability are a crucial part of Docit's plan to make the appointment process easier for patients and practitioners. Docit's Cloud-based software will ensure 100% uptime (from secure servers) and constantly synchronised data. This information can be checked from your smartphone, computer or tablet.</p>
-        </div>
-      </span>
-    </div>
-  </div>
-</div>
-</div>
-<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-</div><!-- /.carousel -->
+          <img src="http://i.imgur.com/nPzXFBB.png?1"/>
+       </span>
+       </div>
+     </div>
+   </div>
+   <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+   <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+ </div><!-- /.carousel -->
 </div>
 
 <div class="row product-shot citeh">
   <h1><span class="font-semibold gray">For Patients</span></h1>
+  <div class="col-lg-4">
 <!-- Carousel
   ================================================== -->
   <div id="myCarousel2" class="carousel slide macbook" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel2" data-slide-to="1"></li>
+    </ol>
+
     <div class="carousel-inner">
       <div class="item active">
-        <div class="video-container">
-          <iframe title="YouTube video player" width="960" height="540" src="//www.youtube.com/embed/pKnwbodjq20" frameborder="0" allowFullScreen></iframe>
-        </div>
+          <img src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Number-1-icon.png" class="iphone"/>
       </div>
       <div class="item">
-       <div class="video-container">
-        <span>
-         <div class="icons">
-          <div class="col-lg-2">
-            <img src="http://getdocit.com/clock.png"/>
-          </div>
-          <div class="col-lg-10">
-            <h3>Save time</h3>
-            <p class="text">Reduce time spent on unnecessary routine phone calls. Docit  allows the secretary to work on more important tasks which would otherwise be ignored whilst taking standard appointment calls. We hope to create a friendlier workplace where constant sound of ringing  will become a thing of the past.</p>
-          </div>
-        </div>
-        <div class="icons">
-          <div class="col-lg-2">
-            <img src="http://getdocit.com/moneybag.png"/>
-          </div>
-          <div class="col-lg-10">
-            <h3>Market your practice</h3>
-            <p class="text">Increase patients and freely advertise your practice. Once joining Docit, you are immediately marketing your business to potential patients and all of Docit's users. New practitioners will especially find this tool useful, as an influx of new patients will contribute to your revenue generation. An editable doctor profile will also provide insights into your practice and collect reviews and ratings.</p>
-          </div>
-        </div>
-        <div class="icons">
-         <div class="col-lg-2">
-          <img src="http://getdocit.com/cloud.png"/>
-        </div>
-        <div class="col-lg-10">
-          <h3>Appointments in the Cloud</h3>
-          <p class="text">Sophisticated and easy to use software in the cloud. Safety and reliability are a crucial part of Docit's plan to make the appointment process easier for patients and practitioners. Docit's Cloud-based software will ensure 100% uptime (from secure servers) and constantly synchronised data. This information can be checked from your smartphone, computer or tablet.</p>
-        </div>
-      </span>
+       <div class="col-lg-offset-1 col-lg-10">
+         <img src="http://mvljnski.home.xs4all.nl/images/NED2.png" class="iphone"/>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="col-lg-8">
+  <span>
+   <div class="icons">
+    <div class="col-lg-2">
+      <img src="http://getdocit.com/planner.png"/>
+    </div>
+    <div class="col-lg-10">
+      <h3>Save time</h3>
+      <p class="text">Reduce time spent on unnecessary routine phone calls. Docit  allows the secretary to work on more important tasks which would otherwise be ignored whilst taking standard appointment calls. We hope to create a friendlier workplace where constant sound of ringing  will become a thing of the past.immediately marketing your business to potential patients and all of Docit's users. New practitioners will especially find this tool useful, as an influx of new.</p>
     </div>
   </div>
-</div>
-</div>
-<a class="left carousel-control" href="#myCarousel2" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-<a class="right carousel-control" href="#myCarousel2" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  <div class="icons">
+    <div class="col-lg-2">
+      <img src="http://getdocit.com/computer.png"/>
+    </div>
+    <div class="col-lg-10">
+      <h3>Market your practice</h3>
+      <p class="text">Increase patients and freely advertise your practice. Once joining Docit, you are immediately marketing your business to potential patients and all of Docit's users. New practitioners will especially find this tool useful, as an influx of new patients will contribute to your revenue generation. An editable doctor profile will also provide insights into your practice and collect reviews and ratings.</p>
+    </div>
+  </div>
+  <div class="icons">
+   <div class="col-lg-2">
+    <img src="http://getdocit.com/reminders.png"/>
+  </div>
+  <div class="col-lg-10">
+    <h3>Appointments in the Cloud</h3>
+    <p class="text">Sophisticated and easy to use software in the cloud. Safety and reliability are a crucial part of Docit's plan to make the appointment process easier for patients and practitioners. Docit's Cloud-based software will ensure 100% uptime (from secure servers) and constantly synchronised data. This information can be checked from your smartphone, computer or tablet.</p>
+  </div>
+</span> 
 </div><!-- /.carousel -->
 </div>
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+</div><!-- /.row -->
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-3">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3 social">
-        <div class="pull-right">
-          <a href="http://twitter.com/getcomposure">
-            <i class="fa fa-twitter-square fa-4x"></i>
-          </a>
-          <a href="http://facebook.com/getcomposure">
-            <i class="fa fa-facebook-square fa-4x"></i>
-          </a>
-          <a href="https://plus.google.com/112576119602159637182">
-            <i class="fa fa-google-plus-square fa-4x"></i>
-          </a>
-        </div>
+
+<!-- Modal -->
+<!-- For Register -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Register Yourself</h4>
       </div>
-      </div><!-- /.row -->
+      <div class="modal-body">
+        <form class="form-signin" role="form">
+          <h2 class="form-signin-heading">Please fill out all the details</h2>
+          <input type="text" class="form-control" placeholder="Full name" required>
+          <input type="text" class="form-control" placeholder="Email address" required>
+          <input type="password" class="form-control" placeholder="Password" required>
+          <input type="password" class="form- control" placeholder="Confirm Password" required>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- For Login -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Please login</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-signin" role="form">
+          <input type="text" class="form-control" placeholder="Email address" required autofocus>
+          <input type="password" class="form-control" placeholder="Password" required>
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
+<!-- For Login -->
+<script type="text/javascript">
+$('#login').modal('hide')
+</script>
 
-      <!-- Modal -->
-      <!-- For Register -->
-      <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="myModalLabel">Register Yourself</h4>
-            </div>
-            <div class="modal-body">
-              <form class="form-signin" role="form">
-                <h2 class="form-signin-heading">Please fill out all the details</h2>
-                <input type="text" class="form-control" placeholder="Full name" required>
-                <input type="text" class="form-control" placeholder="Email address" required>
-                <input type="password" class="form-control" placeholder="Password" required>
-                <input type="password" class="form-control" placeholder="Confirm Password" required>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-              </form>
+<!-- For Login -->
+<script type="text/javascript">
+$('#register').modal('hide');
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+$('.carousel').carousel({
+  interval: false
+});
 
-      <!-- For Login -->
-      <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="myModalLabel">Please login</h4>
-            </div>
-            <div class="modal-body">
-              <form class="form-signin" role="form">
-                <input type="text" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" class="form-control" placeholder="Password" required>
-                <label>
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-              </form>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+</script>
 
 
-      <!-- For Login -->
-      <script type="text/javascript">
-      $('#login').modal('hide')
-      </script>
-
-      <!-- For Login -->
-      <script type="text/javascript">
-      $('#register').modal('hide');
-
-      $('.carousel').carousel({
-        interval: false
-      });
-
-      </script>
-
-
-      <% end %>
+<% end %>

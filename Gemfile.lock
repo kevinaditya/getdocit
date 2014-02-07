@@ -200,9 +200,6 @@ GEM
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
-PLATFORMS
-  x86-mingw32
-
 DEPENDENCIES
   bcrypt-ruby (= 3.1.2)
   bootstrap-sass (= 3.0.3.0)
