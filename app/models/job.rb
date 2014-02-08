@@ -1,0 +1,17 @@
+class Job < ActiveRecord::Base
+	belongs_to :user
+	default_scope -> { order('created_at DESC') }
+	validates :employer, presence: true, length: { maximum: 140 }
+	validates :role, presence: true, length: { maximum: 140 }
+	validates :description, presence: true
+	validates :criteria, presence: true
+	validates :salary, presence: true
+	validates :salary_type, presence: true
+	validates :closed_date, presence: true
+	validates :category, presence: true
+	validates :contact, presence: true
+	validates :contact_email, presence: true
+	validates :location, presence: true, length: { maximum: 140 }
+	validates :user_id, presence: true
+
+end

@@ -1,5 +1,17 @@
 <% if signed_in? %>
 <div class="row">
+  <div class="col-md-8">
+    <h1> All Jobs</h1>
+    <ul class="jobs">
+      <%= render @jobs %>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <%= render 'shared/user_info' %>
+    Post a job
+  </div>
+</div>
+<!-- <div class="row">
   <aside class="span4">
     <section>
       <%= render 'shared/user_info' %>
@@ -15,7 +27,7 @@
     <h3>Micropost Feed</h3>
     <%= render 'shared/feed' %>
   </div>
-</div>
+</div> -->
 <% else %>
 
 <div class="jumbotron">
@@ -24,5 +36,16 @@
   <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
 </div>
 
+<div class="row">
+  <div class="col-md-8">
+    <h1> All Jobs</h1>
+    <ul class="jobs">
+      <%= render @jobs %>
+    </ul>
+  </div>
+  <div class="col-md-4">
+
+  </div>
 </div>
+
 <% end %>

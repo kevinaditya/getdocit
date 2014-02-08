@@ -1,0 +1,127 @@
+<% provide(:title, 'Post a job') %>
+<h1>Post a job</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for Job.new , :html => {:class => "form-horizontal"} do |f| %>
+    <%= render 'shared/error_messages', object: f.object%>
+
+    <div class="form-group">
+      <%= f.label :employer, :class =>"col-sm-2 control-label" %>
+      <div class="col-sm-6">
+        <%= f.text_field :employer,:placeholder =>"e.g: Google.inc", :class =>"form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :location, :class =>"col-sm-2 control-label" %>
+      <div class="col-sm-6">
+        <%= f.text_field :location,:placeholder =>"e.g: Ultimo, Sydney, Australia", :class =>"form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :role, :class =>"col-sm-2 control-label" %>
+      <div class="col-sm-6">
+        <%= f.text_field :role,:placeholder =>"e.g: Ruby on Rails web developer", :class =>"form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, :class =>"col-sm-2 control-label" %>
+      <div class="col-sm-6">
+        <%= f.text_area :description, :placeholder =>"e.g: We are looking for a Ruby on rails programmer that will assist with the development of a data framework and storage solution for financial market data feeds. You may also be required to assist with the development of user interfaces.You will be working with other programmers and engineers on a truly collaborative and exciting project.", :class =>"form-control", :rows => 10%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :criteria, :class =>"col-sm-2 control-label" %>
+      <div class="col-sm-6">
+        <%= f.text_area :criteria, :placeholder =>"e.g: I. Fifteen months web commercial development experience with ruby on rails II. ...", :class =>"form-control", :rows => 10%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :category, :class =>"col-sm-2 control-label" %>
+      <div class="col-sm-6">
+       <select name="job[category]" id="job_role" class="form-control" required>
+        <option value="" default selected>Select the job category</option>
+        <option value="casual">Casual</option> 
+        <option value="part">Part-time</option>
+        <option value="full">Full-time</option>
+        <option value="volunteer">Volunteer</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :salary_type, :class =>"col-sm-2 control-label" %>
+    <div class="col-sm-6">
+      <select name="job[role]" id="job_role" class="form-control" required>
+        <option value="" default selected>Select the salary type</option>
+        <option value="oneoff">One-off</option> 
+        <option value="hourly">Hourly</option>
+        <option value="anually">Anually</option>
+        <option value="stock_option">Stock option</option>
+        <option value="discussed in confidentiality">Discussed in confidentiality</option> 
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :salary_amount, :class =>"col-sm-2 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :salary, :placeholder =>"e.g: 30000", :class =>"form-control"%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :closed_date, :class =>"col-sm-2 control-label" %>
+    <div class='input-group col-sm-5' id='datetimepicker5'>
+      <input name="job[closed_date]"type='text' class="form-control" data-format="DD/MM/YYYY" />
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-time">
+        </span>
+      </span>
+    </div>
+  </div>
+  <h3>Contact person</h3>
+  <div class="form-group">
+    <%= f.label :name, :class =>"col-sm-2 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :contact, :class =>"form-control"%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, :class =>"col-sm-2 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :contact_email, :class =>"form-control"%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :phone, :class =>"col-sm-2 control-label" %>
+    <div class="col-sm-6">
+      <%= f.text_field :contact_phone, :class =>"form-control"%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-2">
+     <%= f.submit "Post this job", class: "btn btn-primary" %>
+   </div>
+ </div>
+
+
+ <script type="text/javascript">
+ $(function () {
+  $('#datetimepicker5').datetimepicker({
+    pickTime: false
+  });
+});
+ </script>
+
+ <% end %>
+</div>
+</div>
