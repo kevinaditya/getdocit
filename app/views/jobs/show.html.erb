@@ -30,14 +30,14 @@
    <div class="form-group">
     <%= f.label :description, :class =>"col-sm-2 control-label" %>
     <div class="col-sm-6">
-     <p class="form-control-static"><%= @job.description %> </p>
+     <p class="form-control-static"><%= simple_format @job.description %> </p>
    </div>
  </div>
 
  <div class="form-group">
   <%= f.label :criteria, :class =>"col-sm-2 control-label" %>
   <div class="col-sm-6">
-   <p class="form-control-static"><%= @job.criteria %> </p>
+   <p class="form-control-static"><%= simple_format @job.criteria %> </p>
  </div>
 </div>
 
