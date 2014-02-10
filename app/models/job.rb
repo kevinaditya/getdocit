@@ -8,7 +8,6 @@ class Job < ActiveRecord::Base
 	validates :salary_type, presence: true
 	validates :closed_date, presence: true
 	validates :category, presence: true
-	validates :contact, presence: true
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   	validates :contact_email, presence:   true,
                     format:     { with: VALID_EMAIL_REGEX },
