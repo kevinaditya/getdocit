@@ -28,6 +28,17 @@ class JobsController < ApplicationController
     end
   end
 
+  def update
+    @job = Job.find(params[:id])
+    if @job.update_attributes(job_params)
+      flash[:success] = "Job updated"
+      redirect_to @job
+    else
+      render 'edit'
+    end
+  end
+
+
   def destroy
     @job.destroy
     redirect_to root_url

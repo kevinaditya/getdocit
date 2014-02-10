@@ -45,10 +45,9 @@
       <%= f.label :category, :class =>"col-sm-2 control-label" %>
       <div class="col-sm-6">
        <select name="job[category]" id="job_role" class="form-control" required>
-        <option value="" default selected>Select the job category</option>
-        <option value="Casual">Casual</option> 
-        <option value="Part-time">Part-time</option>
-        <option value="Full-time">Full-time</option>
+        <option value="Casual" <% if @job.salary_type == "Casual" %>selected<% end %>>Casual</option> 
+        <option value="Part-time" <% if @job.salary_type == "Part-time" %>selected<% end %>>Part-time</option>
+        <option value="Full-time" <% if @job.salary_type == "Full-time" %>selected<% end %>>Full-time</option>
       </select>
     </div>
   </div>
@@ -57,7 +56,6 @@
     <%= f.label :salary_type, :class =>"col-sm-2 control-label" %>
     <div class="col-sm-6">
       <select name="job[salary_type]" id="salary_type" class="form-control" required>
-        <option value="" default selected>Select the salary type</option>
         <option value="One-off" <% if @job.salary_type == "One-off" %>selected<% end %>>One-off</option> 
         <option value="Hourly" <% if @job.salary_type == "Hourly" %>selected<% end %>>Hourly</option>
         <option value="Anually" <% if @job.salary_type == "Anually" %>selected<% end %>>Anually</option>
@@ -78,7 +76,12 @@
   <div class="form-group">
     <%= f.label :closed_date, :class =>"col-sm-2 control-label" %>
     <div class='input-group col-sm-5' id='datetimepicker5'>
-      <input name="job[closed_date]"type='text' class="form-control" data-format="DD/MM/YYYY" placeholder="DD/MM/YYYY format. e.g 25-9-2014" required="required" value="<%= @job.closed_date %>"/>
+      <input name="job[closed_date]"type='text' class="form-control" data-format="DD/MM/YYYY" placeholder="DD/MM/YYYY format. e.g 25-9-2014" required="required" value="<%= @job.closed_date.strftime("%d/%m/%Y") %>"/>
+
+
+
+
+
       <span class="input-group-addon">
         <span class="glyphicon glyphicon-time">
         </span>

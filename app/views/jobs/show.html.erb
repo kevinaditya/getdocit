@@ -23,66 +23,78 @@
     <div class="form-group">
       <%= f.label :role, :class =>"col-sm-2 control-label" %>
       <div class="col-sm-6">
-         <p class="form-control-static"><%= @job.role %> </p>
-      </div>
-    </div>
+       <p class="form-control-static"><%= @job.role %> </p>
+     </div>
+   </div>
 
-    <div class="form-group">
-      <%= f.label :description, :class =>"col-sm-2 control-label" %>
-      <div class="col-sm-6">
-         <p class="form-control-static"><%= @job.description %> </p>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :criteria, :class =>"col-sm-2 control-label" %>
-      <div class="col-sm-6">
-       <p class="form-control-static"><%= @job.criteria %> </p>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :category, :class =>"col-sm-2 control-label" %>
-      <div class="col-sm-6">
-      <p class="form-control-static"><%= @job.category %> </p>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :salary_amount, :class =>"col-sm-2 control-label" %>
+   <div class="form-group">
+    <%= f.label :description, :class =>"col-sm-2 control-label" %>
     <div class="col-sm-6">
-      <p class="form-control-static">$<%= @job.salary %> <%= @job.salary_type %> </p>
-    </div>
-  </div>
+     <p class="form-control-static"><%= @job.description %> </p>
+   </div>
+ </div>
 
-  <div class="form-group">
-    <%= f.label :closed_date, :class =>"col-sm-2 control-label" %>
-    <div class='input-group col-sm-5' id='datetimepicker5'>
-     <p class="form-control-static"><%= @job.closed_date %> </p>
-    </div>
-  </div>
-  <h3>Contact person</h3>
-  <div class="form-group">
-    <%= f.label :name, :class =>"col-sm-2 control-label" %>
-    <div class="col-sm-6">
-     <p class="form-control-static"><%= @job.contact %> </p>
-    </div>
-  </div>
+ <div class="form-group">
+  <%= f.label :criteria, :class =>"col-sm-2 control-label" %>
+  <div class="col-sm-6">
+   <p class="form-control-static"><%= @job.criteria %> </p>
+ </div>
+</div>
 
-  <div class="form-group">
-    <%= f.label :email, :class =>"col-sm-2 control-label" %>
-    <div class="col-sm-6">
-     <p class="form-control-static"><%= @job.contact_email %> </p>
-    </div>
+<div class="form-group">
+  <%= f.label :category, :class =>"col-sm-2 control-label" %>
+  <div class="col-sm-6">
+    <p class="form-control-static"><%= @job.category %> </p>
   </div>
+</div>
 
-  <div class="form-group">
-    <%= f.label :phone, :class =>"col-sm-2 control-label" %>
-    <div class="col-sm-6">
-      <p class="form-control-static"><%= @job.contact_phone %> </p>
-    </div>
+<div class="form-group">
+  <%= f.label :salary_amount, :class =>"col-sm-2 control-label" %>
+  <div class="col-sm-6">
+    <p class="form-control-static">$<%= @job.salary %> <%= @job.salary_type %> </p>
   </div>
+</div>
 
- <% end %>
+<div class="form-group">
+  <%= f.label :closed_date, :class =>"col-sm-2 control-label" %>
+  <div class='input-group col-sm-5' id='datetimepicker5'>
+   <p class="form-control-static"><%= @job.closed_date %> </p>
+ </div>
+</div>
+<h3>Contact person</h3>
+<div class="form-group">
+  <%= f.label :name, :class =>"col-sm-2 control-label" %>
+  <div class="col-sm-6">
+   <p class="form-control-static"><%= @job.contact %> </p>
+ </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :email, :class =>"col-sm-2 control-label" %>
+  <div class="col-sm-6">
+   <p class="form-control-static"><%= @job.contact_email %> </p>
+ </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :phone, :class =>"col-sm-2 control-label" %>
+  <div class="col-sm-6">
+    <p class="form-control-static"><%= @job.contact_phone %> </p>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-2">
+    <% if current_user?(@job.user) %>
+   <%= link_to "Edit", edit_job_path(@job.id),:class=>"btn btn-primary"%>
+   <%= link_to "Delete", @job, method: :delete,
+   data: { confirm: "Are you sure you want to remove this job from the list?" },
+   title: @job.role, :class=>"btn btn-danger" %>
+   <% end %>
+ </div>
+</div>
+
+
+<% end %>
 </div>
 </div>
