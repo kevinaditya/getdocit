@@ -506,3 +506,39 @@ h2 {
     border-color: #BCE8F1;
     color: #31708F;
 }
+
+.table tbody tr > td.success {
+  background-color: #dff0d8 !important;
+  text-align:center; 
+  vertical-align:middle; 
+  font-weight:bold;
+}
+
+.table tbody tr > td.primary {
+  background-color: #428BCA !important;
+  text-align:center; 
+  vertical-align:middle; 
+  font-weight:bold;
+}
+
+.table tbody tr > td.error {
+  background-color: #f2dede !important;
+  text-align:center; 
+  vertical-align:middle; 
+  font-weight:bold;
+}
+
+.table tbody tr > td.warning {
+  background-color: #FFF8B9 !important;
+  text-align:center; 
+  vertical-align:middle; 
+  font-weight:bold;
+}
+
+.table tbody tr > td.info {
+  background-color: #d9edf7 !important;
+  text-align:center; 
+  vertical-align:middle; 
+  font-weight:bold;
+}
+

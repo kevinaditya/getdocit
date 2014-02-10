@@ -1,14 +1,20 @@
 <tr>
-	<td class="type">
-		<% if job.category == "Casual" %>
-		<button type="button" disabled="disabled" class="btn btn-primary"><%= job.category %></button>
-		<% elsif job.category == "Part-time" %>
-		<button type="button" disabled="disabled" class="btn btn-success"><%= job.category %></button>
-		<% else %>
-		<button type="button" disabled="disabled" class="btn btn-info"><%= job.category %></button>
-		<% end %>
-		
+	
+	<% if job.category == "Casual" %>
+	<td class="primary">
+		<%= job.category %>
 	</td>
+	<% elsif job.category == "Part-success" %>
+	<td class="success">
+		<%= job.category %>
+	</td>
+	<% else %>
+	<td class="warning">
+		<%= job.category %>
+	</td>
+	<% end %>
+
+	
 	<td class="role">
 		<h4><%= link_to job.role, job_path(job.id) %></h4>
 	</td>

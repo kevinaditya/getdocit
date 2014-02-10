@@ -47,7 +47,7 @@
        <select name="job[category]" id="job_role" class="form-control" required>
         <option value="Casual" <% if @job.category == "Casual" %>selected<% end %>>Casual</option> 
         <option value="Part-time" <% if @job.category == "Part-time" %>selected<% end %>>Part-time</option>
-        <option value="Full-time" <% if @job.category == "Full-time" %>selected<% end %>>Full-time</option>
+        <option value="Full-time" <% if @job.category  == "Full-time" %>selected<% end %>>Full-time</option>
       </select>
     </div>
   </div>
