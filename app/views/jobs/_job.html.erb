@@ -15,8 +15,8 @@
 	<td class="type">
 		<%= job.employer %><br/><%= job.location %>
 	</td>
-	<td class="timestamp">
-		Posted <%= time_ago_in_words(job.created_at) %> ago.
+	<td>
+		Posted <em><%= time_ago_in_words(job.created_at) %></em> ago.
 	</td>
 	<td>
 		<% if current_user?(job.user) %>
