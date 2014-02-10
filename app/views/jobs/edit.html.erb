@@ -45,9 +45,9 @@
       <%= f.label :category, :class =>"col-sm-2 control-label" %>
       <div class="col-sm-6">
        <select name="job[category]" id="job_role" class="form-control" required>
-        <option value="Casual" <% if @job.salary_type == "Casual" %>selected<% end %>>Casual</option> 
-        <option value="Part-time" <% if @job.salary_type == "Part-time" %>selected<% end %>>Part-time</option>
-        <option value="Full-time" <% if @job.salary_type == "Full-time" %>selected<% end %>>Full-time</option>
+        <option value="Casual" <% if @job.category == "Casual" %>selected<% end %>>Casual</option> 
+        <option value="Part-time" <% if @job.category == "Part-time" %>selected<% end %>>Part-time</option>
+        <option value="Full-time" <% if @job.category == "Full-time" %>selected<% end %>>Full-time</option>
       </select>
     </div>
   </div>
