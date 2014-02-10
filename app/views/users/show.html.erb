@@ -12,13 +12,12 @@
     </section>
   </aside>
   <div class="span8">
-    <%=  User.find(1).jobs %>
     <% if @user.jobs.any? %>
-      <h3>Jobs (<%= @user.jobs.count %>)</h3>
-      <ol class="jobs">
-        <%= render @jobs %>
-      </ol>
-      <%= will_paginate @jobs %>
+    <h3>Jobs (<%= @user.jobs.count %>)</h3>
+    <table class="table table-striped table-hover table-condensed">
+      <%= render @jobs %>
+    </table>
+    <%= will_paginate @jobs %>
     <% end %>
   </div>
 </div>

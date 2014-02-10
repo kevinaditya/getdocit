@@ -1,6 +1,29 @@
-<li>
-  <span class="role"><%= job.role %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(job.created_at) %> ago.
-  </span>
-</li>
+<tr>
+	<td class="type">
+		<% if job.category == "casual" %>
+		<button type="button" disabled="disabled" class="btn btn-primary"><%= job.category %></button>
+		<% elsif job.category == "part-time" %>
+		<button type="button" disabled="disabled" class="btn btn-success"><%= job.category %></button>
+		<% else %>
+		<button type="button" disabled="disabled" class="btn btn-info"><%= job.category %></button>
+		<% end %>
+		
+	</td>
+	<td class="role">
+		<h4><%= link_to job.role, job_path(job.id) %></h4>
+	</td>
+	<td class="type">
+		<%= job.employer %><br/><%= job.location %>
+	</td>
+	<td class="timestamp">
+		Posted <%= time_ago_in_words(job.created_at) %> ago.
+	</td>
+	<td>
+		<% if current_user?(job.user) %>
+		<%= link_to "Edits", edit_job_path(job.id),:class=>"btn btn-default"%>
+		<%= link_to "Delete", job, method: :delete,
+		data: { confirm: "Are you sure you want to remove this job from the list?" },
+		title: job.role, :class=>"btn btn-danger" %>
+		<% end %>
+	</td>
+</tr>

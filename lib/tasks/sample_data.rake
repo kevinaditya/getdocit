@@ -35,7 +35,7 @@ def make_jobs
     salary_type: "per year",
     closed_date: "12-9-2014",
     category: "full time",
-    contact: "Kevin Aditya email : kevinadityauts@gmail.com",
+    contact: "Kevin Aditya",
     contact_email: "kevinadityauts@gmail.com",
     contact_phone: 0430707314,
     location: "Sydney")

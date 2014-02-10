@@ -500,3 +500,9 @@ h2 {
 .input-group[class*="col-"] {
     padding-left: 15px;
 }
+
+.alert-notice {
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+    color: #31708F;
+}

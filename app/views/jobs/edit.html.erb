@@ -1,5 +1,5 @@
-<% provide(:title, 'Post a job') %>
-<h1>Post a job</h1>
+<% provide(:title, @job.role) %>
+<h1><%= @job.role %></h1>
 
 <div class="row">
   <div class="span6 offset3">
@@ -58,12 +58,12 @@
     <div class="col-sm-6">
       <select name="job[salary_type]" id="salary_type" class="form-control" required>
         <option value="" default selected>Select the salary type</option>
-        <option value="One-off">One-off</option> 
-        <option value="Hourly">Hourly</option>
-        <option value="Anually">Anually</option>
-        <option value="Stock option">Stock option</option>
-        <option value="Discussed in confidentiality">Discussed in confidentiality</option>
-        <option value="volunteer">Volunteer</option>
+        <option value="One-off" <% if @job.salary_type == "One-off" %>selected<% end %>>One-off</option> 
+        <option value="Hourly" <% if @job.salary_type == "Hourly" %>selected<% end %>>Hourly</option>
+        <option value="Anually" <% if @job.salary_type == "Anually" %>selected<% end %>>Anually</option>
+        <option value="Stock option" <% if @job.salary_type == "Stock option" %>selected<% end %>>Stock option</option>
+        <option value="Discussed in confidentiality" <% if @job.salary_type == "Discussed in confidentiality" %>selected<% end %>>Discussed in confidentiality</option>
+        <option value="Volunteer" <% if @job.salary_type == "Volunteer" %>selected<% end %>>Volunteer</option>
       </select>
     </div>
   </div>
@@ -78,7 +78,7 @@
   <div class="form-group">
     <%= f.label :closed_date, :class =>"col-sm-2 control-label" %>
     <div class='input-group col-sm-5' id='datetimepicker5'>
-      <input name="job[closed_date]"type='text' class="form-control" data-format="DD/MM/YYYY" placeholder="DD/MM/YYYY format. e.g 25-9-2014" required="required"/>
+      <input name="job[closed_date]"type='text' class="form-control" data-format="DD/MM/YYYY" placeholder="DD/MM/YYYY format. e.g 25-9-2014" required="required" value="<%= @job.closed_date %>"/>
       <span class="input-group-addon">
         <span class="glyphicon glyphicon-time">
         </span>
@@ -109,7 +109,7 @@
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-2">
-     <%= f.submit "Post this job", class: "btn btn-primary" %>
+     <%= f.submit "Update this job", class: "btn btn-primary" %>
    </div>
  </div>
 
