@@ -66,15 +66,12 @@ p {
 /* header */
 
 #logo {
-  float: left;
   margin-right: 10px;
   font-size: 1.7em;
+  padding-top : 120px;
   color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
-  line-height: 1;
+  text-align:center;
   &:hover {
     color: white;
     text-decoration: none;
@@ -542,3 +539,6 @@ h2 {
   font-weight:bold;
 }
 
+.navbar-header {
+    margin-top: 7px;
+}
