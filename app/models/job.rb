@@ -8,7 +8,7 @@ class Job < ActiveRecord::Base
 	validates :salary_type, presence: true
 	validates :closed_date, presence: true
 	validates :category, presence: true
-
+	validates :apply, presence: true
 	validates :user_id, presence: true
 
 end
