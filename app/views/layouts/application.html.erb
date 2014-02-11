@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag "application", media: "all",
-                                           "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>
-    <%= analytics_init if Rails.env.production? %>
-  </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
-    </div>
-  </body>
+<head>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <meta property="og:title" content="<%= yield(:title).present? ? yield(:title) : 'CobaOcab' %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= request.url %>" />
+  <meta property="og:image" content="http://www.foobar.com/assets/logo.png" />
+  <meta property="og:site_name" content="Cobaocab" />
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag "application", media: "all",
+  "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+  <%= analytics_init if Rails.env.production? %>
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <div class="container">
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
+</body>
 </html>
