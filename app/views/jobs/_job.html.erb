@@ -23,7 +23,7 @@
 	</td>
 	<td>
 		Posted <em><%= time_ago_in_words(job.created_at) %></em> ago.
-		<br/>Expired :<%= job.closed_date.strftime("%d/%m/%Y") %>
+		<br/>Expired: <%= job.closed_date.strftime("%d/%m/%Y") %>
 	</td>
 	<td>
 		<% if current_user?(job.user) %>

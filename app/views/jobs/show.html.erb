@@ -66,31 +66,14 @@
    <p class="form-control-static"><%= @job.closed_date.strftime("%d/%m/%Y") %></p>
  </div>
 </div>
-<h3>Contact person</h3>
-<% if !@job.contact.empty? %>
-<div class="form-group">
-  <%= f.label :name, :class =>"col-sm-2 control-label" %>
-  <div class="col-sm-6">
-   <p class="form-control-static"><%= @job.contact %> </p>
- </div>
-</div>
-<% end %>
 
-<div class="form-group">
-  <%= f.label :email, :class =>"col-sm-2 control-label" %>
+ <div class="form-group">
+  <%= f.label :apply, :class =>"col-sm-2 control-label" %>
   <div class="col-sm-6">
-   <p class="form-control-static"><%= @job.contact_email %> </p>
+   <p class="form-control-static"><%= simple_format @job.apply %> </p>
  </div>
 </div>
 
-<% if !@job.contact_phone.empty? %>
-<div class="form-group">
-  <%= f.label :phone, :class =>"col-sm-2 control-label" %>
-  <div class="col-sm-6">
-    <p class="form-control-static"><%= @job.contact_phone %> </p>
-  </div>
-</div>
-<% end %>
 
 <div class="form-group">
   <div class="col-sm-offset-2 col-sm-2">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208130050) do
+ActiveRecord::Schema.define(version: 20140211055201) do
 
   create_table "jobs", force: true do |t|
     t.string   "employer"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140208130050) do
     t.datetime "updated_at"
     t.text     "contact_phone"
     t.text     "contact_email"
+    t.text     "apply"
   end
 
   add_index "jobs", ["user_id", "created_at"], name: "index_jobs_on_user_id_and_created_at"
