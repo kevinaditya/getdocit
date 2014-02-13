@@ -11,11 +11,11 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find_by_role(params[:id])
+    @job = Job.find(params[:id])
   end
 
   def edit
-    @job = Job.find_by_role(params[:id])
+    @job = Job.find(params[:id])
   end
 
   def create
@@ -29,7 +29,7 @@ class JobsController < ApplicationController
   end
 
   def update
-    @job = Job.find_by_role(params[:id])
+    @job = Job.find(params[:id])
     if @job.update_attributes(job_params)
       flash[:success] = "Job updated"
       redirect_to @job

@@ -12,6 +12,6 @@ class Job < ActiveRecord::Base
 	validates :user_id, presence: true
 
 	def to_param
-		role
+		"#{id}-#{role}"
 	end
 end
