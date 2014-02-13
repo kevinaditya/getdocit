@@ -16,7 +16,7 @@
 
 	
 	<td class="role">
-		<h4><%= link_to job.role, job_path(job) %></h4>
+		<h4><%= link_to job.role, job_path(job.id) %></h4>
 	</td>
 	<td class="type">
 		<%= job.employer %><br/><%= job.location %>
@@ -37,7 +37,7 @@
 			</ul>
 		</div>
 		<% if current_user?(job.user) %>
-		<%= link_to "Edit", edit_job_path(job),:class=>"btn btn-default"%>
+		<%= link_to "Edit", edit_job_path(job.id),:class=>"btn btn-default"%>
 		<% end %>
 	</td>
 </tr>
