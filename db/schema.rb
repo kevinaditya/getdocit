@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140211055201) do
+ActiveRecord::Schema.define(version: 20140213045223) do
 
   create_table "jobs", force: true do |t|
     t.string   "employer"
@@ -31,8 +31,10 @@ ActiveRecord::Schema.define(version: 20140211055201) do
     t.text     "contact_phone"
     t.text     "contact_email"
     t.text     "apply"
+    t.string   "slug"
   end
 
+  add_index "jobs", ["slug"], name: "index_jobs_on_slug"
   add_index "jobs", ["user_id", "created_at"], name: "index_jobs_on_user_id_and_created_at"
 
   create_table "microposts", force: true do |t|
