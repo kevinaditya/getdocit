@@ -11,11 +11,11 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params[:id])
+    @job = Job.find_by_slug(params[:id])
   end
 
   def edit
-    @job = Job.find(params[:id])
+    @job = Job.find_by_slug(params[:id])
   end
 
   def create
@@ -29,7 +29,7 @@ class JobsController < ApplicationController
   end
 
   def update
-    @job = Job.find(params[:id])
+    @job = Job.find_by_slug(params[:id])
     if @job.update_attributes(job_params)
       flash[:success] = "Job updated"
       redirect_to @job
