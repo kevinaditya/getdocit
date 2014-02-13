@@ -1,3 +1,9 @@
+<div class="social-likes">
+  <div class="facebook" title="Share link on Facebook">Facebook</div>
+  <div class="twitter" data-via="Coba_Ocab" data-related="Free job listing and sharing for students and new graduates" title="Share link on Twitter">Twitter</div>
+  <div class="plusone" title="Share link on Google+">Google+</div>
+  <div class="pinterest" title="Share image on Pinterest" data-media="">Pinterest</div>
+</div>
 <% if signed_in? %>
 <div class="row">
   <div class="col-md-8">
@@ -7,6 +13,7 @@
     <%= render 'shared/user_info' %>
   </div>
 </div>
+
 <% else %>
 
 <div class="jumbotron">
