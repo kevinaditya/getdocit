@@ -546,3 +546,11 @@ h2 {
 #logo2{
   padding-bottom:10px;
 }
+
+.dropdown-menu {
+    background-clip: none;
+    background-color: inherit;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+  }
