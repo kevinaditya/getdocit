@@ -11,4 +11,7 @@ class Job < ActiveRecord::Base
 	validates :apply, presence: true
 	validates :user_id, presence: true
 
+	def to_param
+		role
+	end
 end
