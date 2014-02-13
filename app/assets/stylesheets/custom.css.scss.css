@@ -554,3 +554,7 @@ h2 {
     border-radius: none;
     box-shadow: none;
   }
+
+.social-likes__button, .social-likes__icon, .social-likes__counter {
+    font-size: 16pt;
+}
