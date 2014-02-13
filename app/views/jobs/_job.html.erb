@@ -16,7 +16,7 @@
 
 	
 	<td class="role">
-		<h4><%= link_to job.role, job_path(job) %></h4>
+		<h4><%= link_to job.role, job_path(job.id) %></h4>
 	</td>
 	<td class="type">
 		<%= job.employer %><br/><%= job.location %>
