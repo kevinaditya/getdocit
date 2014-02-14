@@ -3,8 +3,7 @@ class JobsController < ApplicationController
   before_action :correct_user,   only: :destroy
   
   def index
-    
-    @jobs = Job.select { |job| job.category == 'Casual' }
+    @jobs = Job.all.paginate(page: params[:page])
   end
 
   def new

@@ -1,44 +1,29 @@
-<tr>
-	
-	<% if job.category == "Casual" %>
-	<td class="info">
-		<%= job.category %>
-	</td>
-	<% elsif job.category == "Part-time" %>
-	<td class="success">
-		<%= job.category %>
-	</td>
-	<% else %>
-	<td class="warning">
-		<%= job.category %>
-	</td>
-	<% end %>
+ <div class="col-md-4">
+ 	<h4 class="job-category"><%= job.category %></h4>
+ 	<a href="<%= job_path(job) %>">
+ 		<% if job.category == "Casual" %>
+ 		<button class="job-button casual-color">
+ 		<% elsif job.category == "Part-time" %>
+ 		<button class="job-button part-color">
+ 		<% else %>
+ 		<button class="job-button full-color">
+ 		<% end %>
 
-	
-	<td class="role">
-		<h4><%= link_to job.role, job_path(job) %></h4>
-	</td>
-	<td class="type">
-		<%= job.employer %><br/><%= job.location %>
-	</td>
-	<td>
-		Posted <em><%= time_ago_in_words(job.created_at) %></em> ago.
-		<br/>Expired: <%= job.closed_date.strftime("%d/%m/%Y") %>
-	</td>
-	<td>
-		<div class="btn-group">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				Share <span class="caret"></span>
-			</button>
-			<ul id="SocShare" class="dropdown-menu" role="menu" data-counters="no">
-				<li class="social-likes social-likes_vertical" data-url="http://cobaocab.herokuapp.com/jobs/<%= job.slug %>" data-title="<%= job.description %>" data-counters="no"> <div class="facebook" title="Share link on Facebook">Facebook</div></li>
-				<li class="social-likes social-likes_vertical"><div class="twitter" data-via="Coba_Ocab" data-related="Free job listing and sharing for students and new graduates" data-url="http://cobaocab.herokuapp.com/jobs/<%= job.slug %>" data-counters="no" data-title="<%= job.description %>" title="Share link on Twitter">Twitter</div></li>
-				<li class="social-likes social-likes_vertical"> <div class="plusone" data-url="http://cobaocab.herokuapp.com/jobs/<%= job.slug %>" data-counters="no"data-title="<%= job.description %>" title="Share link on Google+">Google+</div></li>
-			</ul>
-		</div>
-		<% if current_user?(job.user) %>
-		<%= link_to "Edit", edit_job_path(job),:class=>"btn btn-default"%>
-		<% end %>
-	</td>
-</tr>
+ 		<h3>
+ 			<strong><%= job.role %></strong>
+ 		</h3>
+ 		<p><%= job.employer %> - <%= job.location %></p>
+ 		<p>Posted <em><%= time_ago_in_words(job.created_at) %></em> ago.</p>
+ 		<p>Expired: <%= job.closed_date.strftime("%d/%m/%Y") %></p>
+ 		</button>
+ 	</a>
+
+ <div class="social-likes social-likes_light" data-counters="no">
+
+ 	<div class="facebook" title="Share link on Facebook" data-url="http://cobaocab.herokuapp.com/jobs/<%= job.slug %>" data-title="<%= job.description %>"></div>
+ 	<div class="twitter" data-via="Coba_Ocab" data-related="Free job listing and sharing for students and new graduates" data-url="http://cobaocab.herokuapp.com/jobs/<%= job.slug %>" data-counters="no" data-title="<%= job.description %>" title="Share link on Twitter"></div>
+ 	<div class="plusone" data-url="http://cobaocab.herokuapp.com/jobs/<%= job.slug %>" data-counters="no"data-title="<%= job.description %>" title="Share link on Google+"></div>
+ </div>
+</div>
+
 

@@ -13,8 +13,4 @@ class Job < ActiveRecord::Base
 	validates :category, presence: true
 	validates :apply, presence: true
 	validates :user_id, presence: true
-
-
-
-
 end
