@@ -1,4 +1,4 @@
- <div class="col-md-4">
+ <div class="col-md-3">
  	<h4 class="job-category"><%= job.category %></h4>
  	<a href="<%= job_path(job) %>">
  		<% if job.category == "Casual" %>
@@ -9,9 +9,9 @@
  		<button class="job-button full-color">
  		<% end %>
 
- 		<h3>
+ 		<h4>
  			<strong><%= job.role %></strong>
- 		</h3>
+ 		</h4>
  		<p><%= job.employer %> - <%= job.location %></p>
  		<p>Posted <em><%= time_ago_in_words(job.created_at) %></em> ago.</p>
  		<p>Expired: <%= job.closed_date.strftime("%d/%m/%Y") %></p>

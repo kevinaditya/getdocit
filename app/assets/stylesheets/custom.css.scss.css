@@ -580,9 +580,13 @@ h2 {
   background-color: #d9edf7;
 }
 
+h4, .h4 {
+    font-size: 20px;
+}
 h4.job-category{
   position: absolute;
   margin-left:10px;
+  font-size: 16px;
 }
 
 .social-likes {
@@ -590,6 +594,7 @@ h4.job-category{
   width: 100%;
   text-align: center;
 }
+
 
 
 
