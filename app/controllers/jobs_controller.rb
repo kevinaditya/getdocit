@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   before_action :correct_user,   only: :destroy
   
   def index
-    @jobs = Job.all
+    @jobs = Job.all.paginate(page: params[:page] , :per_page => 20)
   end
 
   def new

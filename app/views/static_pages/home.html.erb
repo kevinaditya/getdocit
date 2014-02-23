@@ -2,7 +2,7 @@
 <% if signed_in? %>
 <div class="row">
   <div class="col-md-8">
-    <h1> All Jobs</h1>
+    <h1>Open position</h1>
   </div>
   <div class="col-md-4">
     <%= render 'shared/user_info' %>
@@ -10,12 +10,7 @@
 </div>
 
 <% else %>
-
-<div class="jumbotron">
-  <p>Hello, students, new graduates, and employers!<p>
-  <h2>Welcome to CobaOcab, a place to list jobs for students and new graduates.</h2> 
-  <p>Get employed and help others to get a job by sharing the job advertisement to social media or post a new job advertisement here for <strong>FREE!</strong></p>
-</div>
+<div class="alert-warning">Dear friends, CobaOcab will be shutdown on 9 March 2014 forgood due to undisclosed reason. Thank you for the support and understanding!</div>
 <h1> Open position</h1>
 <% end %>
 
@@ -25,7 +20,5 @@
   </div>
 </div>
 
-<div class="row">
- 
-</div>
+<%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
 

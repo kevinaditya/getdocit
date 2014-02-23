@@ -27,7 +27,8 @@ end
 
 def make_jobs
   user = User.find(1)
-  user.jobs.create!(employer: "Kevin Aditya",
+   50.times do
+    user.jobs.create!(employer: "Kevin Aditya",
     role: "Developer",
     description: "we are looking for genius developer who can count 1 to 10",
     criteria: "phd of mathematics",
@@ -35,10 +36,9 @@ def make_jobs
     salary_type: "Anually",
     closed_date: "12-9-2014",
     category: "Full-time",
-    contact: "Kevin Aditya",
-    contact_email: "kevinadityauts@gmail.com",
-    contact_phone: 0430707314,
+    apply: "this is how you apply",
     location: "Sydney")
+    end
 end
 
 # def make_microposts
